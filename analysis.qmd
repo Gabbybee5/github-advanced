@@ -1,0 +1,30 @@
+---
+title: "GitHub Advanced"
+author: "Gabriella Buccellato"
+format: html
+execute:
+  echo: false
+---
+
+
+```{r}
+#| label: setup
+#| message: false
+
+library(tidyverse)
+```
+
+```{r}
+#| label: mpg-plot
+#| fig-cap: "Engine size and fuel efficiency"
+
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point(size = 3) +
+  labs(
+    title = "Engine Size vs. Highway Fuel Efficiency",
+    x = "Engine Size (liters)",
+    y = "Highway Miles per Gallon",
+    color = "Vehicle Class"
+  ) +
+  theme_minimal()
+```
